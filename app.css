@@ -44,9 +44,8 @@ button:active {
 #generated-number-section,
 #controls {
   margin: 1rem auto;
-  width: 30rem;
-  max-width: 30rem;
-  min-width: 10rem;
+  width: auto;
+  min-width: 25rem;
   text-align: center;
   white-space: pre-line;
   border-radius: 10px;
@@ -70,5 +69,6 @@ h3 {
 
 #controls {
   display: flex;
+  max-width: 25rem;
   flex-direction: column;
 }
