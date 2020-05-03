@@ -9,6 +9,7 @@ body {
 h2 {
   font-size: 1.5rem;
   margin: 1rem 0.5rem;
+  align-self: auto;
 }
 p {
   font-size: 1rem;
@@ -44,11 +45,13 @@ button:active {
 #controls {
   margin: 1rem auto;
   width: 30rem;
+  max-width: 30rem;
+  min-width: 10rem;
   text-align: center;
   white-space: pre-line;
   border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: auto auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   background: white;
   display: table;
 }
