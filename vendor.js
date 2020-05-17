@@ -10,10 +10,11 @@ function outputResult(result) {
 	currentResultOutput.textContent = result;
 }
 
-function outputLog(result) {
-	showLogSection.textContent = result;
-}
+// function outputLog(result) {
+// 	showLogSection.textContent = result;
+// }
 
 function outputNickname(result) {
 	showNumberNickname.textContent = result;
 }
+

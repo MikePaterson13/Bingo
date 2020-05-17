@@ -27,33 +27,28 @@ function generateNextNumber() {
 	}
 }
 
+function changeBoxStyle (boxIdName) {
+	let s = "b" + boxIdName;
+	document.getElementById(s).className = "boxStyleTwo" + " " + s;
+}
+
+
 function generationHandler() {
 	nextNewNumber = random[newLine];
 	logOutput = random.slice(0, newLine + 1);
 	outputResult(nextNewNumber);
 	numberName = lookupNumberNickname(nextNewNumber);
-	outputNickname(numberName)
-	showLog();
+	outputNickname(numberName);
+	changeBoxStyle(nextNewNumber);
 }
 
 function resetGameClearLog() {
 	let confirmAnswer;
 	confirmAnswer = confirm("Do you really want to reset the Game?");
 	if (confirmAnswer === true) {
-		nextNewNumber = 0;
-		outputResult(defaultResult);
-		random = 0;	
-		newLine = 0;
-		outputLog(random);
-		logOutput = 0;
-		outputNickname("");
-		numberName = 0;
+		location.reload();
 	}
 }
-function showLog() {
-	outputLog(logOutput);
-}
-
 function lookupNumberNickname(newNumberNickname) {
 	let lookup = {
 		0: "WHOOPS!",

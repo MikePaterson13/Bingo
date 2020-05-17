@@ -1,22 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Bingo Generator</title>
-    <link rel="stylesheet" href="app.css" />
-  </head>
-    <script src="vendor.js" defer></script>
-    <script src="app.js" defer></script> 
-  <body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Bingo Generator</title>
+		<link rel="stylesheet" href="assets/styles/app.css" />
+	</head>
+	<script src="assets/scripts/vendor.js" defer></script>
+	<script src="assets/scripts/app.js" defer></script>
+	<body>
+		<div class="wrapper">
+			<div class="box item1">
+				<div>
+					<h4>The Bingo Generator</h4>
+				</div>
+			</div>
+			<div class="box item2">
+				<h2>Next Number is:</h2>
+				<h3><span id="number-nickname">----</span></h3>
+				<h1><span id="current-result"> 0</span></h1>
+				<section id="controls">
+					<button type="button" id="new-number">New Number</button>
+					<button type="button" id="reset-game">Reset Game</button>
+				</section>
+			</div>
+			<div class="box item3">
+        <div class="mini numb" id="b1">1</div>
+        <div class="mini numb" id="b2">2</div>
+        <div class="mini numb" id="b3">3</div>
+        <div class="mini numb" id="b4">4</div>
+        <div class="mini numb" id="b5">5</div>
+        <div class="mini numb" id="b6">6</div>
+        <div class="mini numb" id="b7">7</div>
+        <div class="mini numb" id="b8">8</div>
+        <div class="mini numb" id="b9">9</div>
+        <div class="mini numb" id="b10">10</div>
+        <div class="mini numb" id="b11">11</div>
+        <div class="mini numb" id="b12">12</div>
+        <div class="mini numb" id="b13">13</div>
+        <div class="mini numb" id="b14">14</div>
+        <div class="mini numb" id="b15">15</div>
+        <div class="mini numb" id="b16">16</div>
+        <div class="mini numb" id="b17">17</div>
+        <div class="mini numb" id="b18">18</div>
+        <div class="mini numb" id="b19">19</div>
+        <div class="mini numb" id="b20">20</div>
+        <div class="mini numb" id="b21">21</div>
+        <div class="mini numb" id="b22">22</div>
+        <div class="mini numb" id="b23">23</div>
+        <div class="mini numb" id="b24">24</div>
+        <div class="mini numb" id="b25">25</div>
+        <div class="mini numb" id="b26">26</div>
+        <div class="mini numb" id="b27">27</div>
+        <div class="mini numb" id="b28">28</div>
+        <div class="mini numb" id="b29">29</div>
+        <div class="mini numb" id="b30">30</div>
+        <div class="mini numb" id="b31">31</div>
+        <div class="mini numb" id="b32">32</div>
+        <div class="mini numb" id="b33">33</div>
+        <div class="mini numb" id="b34">34</div>
+        <div class="mini numb" id="b35">35</div>
+        <div class="mini numb" id="b36">36</div>
+        <div class="mini numb" id="b37">37</div>
+        <div class="mini numb" id="b38">38</div>
+        <div class="mini numb" id="b39">39</div>
+        <div class="mini numb" id="b40">40</div>
+        <div class="mini numb" id="b41">41</div>
+        <div class="mini numb" id="b42">42</div>
+        <div class="mini numb" id="b43">43</div>
+        <div class="mini numb" id="b44">44</div>
+        <div class="mini numb" id="b45">45</div>
+        <div class="mini numb" id="b46">46</div>
+        <div class="mini numb" id="b47">47</div>
+        <div class="mini numb" id="b48">48</div>
+        <div class="mini numb" id="b49">49</div>
+        <div class="mini numb" id="b50">50</div>
+        <div class="mini numb" id="b51">51</div>
+        <div class="mini numb" id="b52">52</div>
+        <div class="mini numb" id="b53">53</div>
+        <div class="mini numb" id="b54">54</div>
+        <div class="mini numb" id="b55">55</div>
+        <div class="mini numb" id="b56">56</div>
+        <div class="mini numb" id="b57">57</div>
+        <div class="mini numb" id="b58">58</div>
+        <div class="mini numb" id="b59">59</div>
+        <div class="mini numb" id="b60">60</div>
+        <div class="mini numb" id="b61">61</div>
+        <div class="mini numb" id="b62">62</div>
+        <div class="mini numb" id="b63">63</div>
+        <div class="mini numb" id="b64">64</div>
+        <div class="mini numb" id="b65">65</div>
+        <div class="mini numb" id="b66">66</div>
+        <div class="mini numb" id="b67">67</div>
+        <div class="mini numb" id="b68">68</div>
+        <div class="mini numb" id="b69">69</div>
+        <div class="mini numb" id="b70">70</div>
+        </div>
+        <!-- <div class="box item4">
+        </div> -->
+      </div>
+		</div>
+	</body>
+
+	<!-- <body>
     <section id="generated-number-section">
       <h2>The Bingo Number Generator</h2>
     </section>
     <section id="generated-number-section">
-      <h2>Next Number is:</h2> 
-          <h3><span id="number-nickname"></span></h3>
-          <h1><span id="current-result">0</span></h1>
+     
     </section>
     <section id="controls">
       <button type="button" id="new-number">New Number</button>
@@ -26,6 +118,5 @@
       <h2>Generated Numbers:</h2>
       <p id="the-log">0</p>
     </secion>
-  </body>    
+  </body>     -->
 </html>
-
