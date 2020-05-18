@@ -1,15 +1,22 @@
 const defaultResult = 0;
-let random = 0;
-let nextNewNumber = 0;
-let newLine = 0;
+let random = defaultResult;
+let nextNewNumber = defaultResult;
+let newLine = defaultResult;
 let logOutput;
 let numberName;
 
+function off() {
+	document.getElementById("overlay").style.display = "none";
+}
+function on() {
+	document.getElementById("overlay").style.display = "block";
+}
 function generateLog() {
 	let max = 70;
+	let min = 1;
 	random = [];
 	for (let i = 0; i < max; i++) {
-		let temp = Math.floor(Math.random() * max);
+		let temp = Math.floor(Math.random() * (max - min + 1) + min);
 		if (random.indexOf(temp) == -1) {
 			random.push(temp);
 		} else i--;
@@ -27,12 +34,11 @@ function generateNextNumber() {
 	}
 }
 
-function changeBoxStyle (boxIdName) {
+function changeBoxStyle(boxIdName) {
 	let s = "b" + boxIdName;
-	document.getElementById(s).className = "boxStyleTwo" + " " + s;
+	let n = "boxStyleTwo" + " " + s;
+	document.getElementById(s).className = n;
 }
-
-
 function generationHandler() {
 	nextNewNumber = random[newLine];
 	logOutput = random.slice(0, newLine + 1);
@@ -46,8 +52,17 @@ function resetGameClearLog() {
 	let confirmAnswer;
 	confirmAnswer = confirm("Do you really want to reset the Game?");
 	if (confirmAnswer === true) {
-		location.reload();
+		// location.reload();
+		for (i = 0; i < logOutput.length; i++) {
+			let s = `b${logOutput[i]}`;
+			let n = "mini numb";
+			document.getElementById(s).className = n;
+		}
 	}
+	outputNickname("----");
+	outputResult(defaultResult);
+	random = 0;
+	newLine = 0;
 }
 function lookupNumberNickname(newNumberNickname) {
 	let lookup = {
@@ -123,8 +138,16 @@ function lookupNumberNickname(newNumberNickname) {
 		69: "Either Way Up",
 		70: "Three Score and 10",
 	};
-	return lookup[newNumberNickname]
+	return lookup[newNumberNickname];
+}
+function generatePlayerNumbers () {	
+let max = 70;
+let min = 1;
+let random = Math.floor(Math.random() * (max - min + 1) + min);
+
 }
 
 newNumberBtn.addEventListener("click", generateNextNumber);
 resetGameBtn.addEventListener("click", resetGameClearLog);
+overLayOffBtn.addEventListener("click", off);
+overLayOnBtn.addEventListener("click", on);
