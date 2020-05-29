@@ -11,22 +11,22 @@ function off() {
 function on() {
 	document.getElementById("overlay").style.display = "block";
 }
-function generateLog() {
-	let max = 70;
-	let min = 1;
+
+function generateLog(max, min, end, start) {
 	random = [];
-	for (let i = 0; i < max; i++) {
+	for (start = 0; start < end; start++) {
 		let temp = Math.floor(Math.random() * (max - min + 1) + min);
 		if (random.indexOf(temp) == -1) {
 			random.push(temp);
-		} else i--;
+		} else start--;
 	}
 	console.log(random);
 }
 
 function generateNextNumber() {
 	if (random === 0) {
-		generateLog();
+		let userInput = prompt('What number do you want to play up to?', 80)
+		generateLog(userInput,1,userInput,1);
 		generationHandler();
 	} else if (random !== 0) {
 		newLine = newLine + 1;
@@ -52,7 +52,6 @@ function resetGameClearLog() {
 	let confirmAnswer;
 	confirmAnswer = confirm("Do you really want to reset the Game?");
 	if (confirmAnswer === true) {
-		// location.reload();
 		for (i = 0; i < logOutput.length; i++) {
 			let s = `b${logOutput[i]}`;
 			let n = "mini numb";
@@ -137,6 +136,16 @@ function lookupNumberNickname(newNumberNickname) {
 		68: "Saving Grace",
 		69: "Either Way Up",
 		70: "Three Score and 10",
+		71: "Bang on the Drum",
+		72: "Six Dozen",
+		73: "Queen B",
+		74: "Candy Store",
+		75: "Strive and Strive",
+		76: "Trombones",
+		77: "Sunset Trip",
+		78: "Heaven's Gate",
+		79: "One More Time",
+		80: "Eight and Blank"
 	};
 	return lookup[newNumberNickname];
 }
