@@ -28,7 +28,7 @@ const defaultResult = 0;
 
 
 function numberGerenerator() {
-   let a = confirm("Are you sure you want to Generate new numbers?");
+   let a = confirm("Are you sure you want to generate new numbers?");
    if (a === true){
       let columnOne = [];
 let columnTwo = [];
