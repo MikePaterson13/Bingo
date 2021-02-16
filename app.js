@@ -92,7 +92,7 @@ function lookupNumberNickname(newNumberNickname) {
 		24: "Two Dozen",
 		25: "Duck and Dive",
 		26: "Pick and Mix",
-		27: "Take Me to Heaven",
+		27: "Bebhinn from Heaven",
 		28: "Jones' Being Late",
 		29: "Rise and Shine",
 		30: "Dirty Gertie",
