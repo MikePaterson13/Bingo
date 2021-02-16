@@ -103,7 +103,7 @@ function lookupNumberNickname(newNumberNickname) {
 		35: "Jump and Jive",
 		36: "Three Dozen",
 		37: "More than 11",
-		38: "Christmas Cake",
+		38: "Carol-Ann's Cake",
 		39: "Steps",
 		40: "Naughty 40",
 		41: "Time for Fun",
